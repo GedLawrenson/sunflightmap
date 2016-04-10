@@ -39,28 +39,19 @@ if(array_key_exists("autoload", $_GET)) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SunFlight.net - Day and Night Flight Map</title>
-
+	<title>SunFlight - Day and Night Flight Map</title>
 	<meta name="description" content="SunFlight is an app that shows you the path of the sun for your flight.">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-
-	<meta property="og:title" content="SunFlight.net" />
+	<meta property="og:title" content="SunFlight" />
 	<meta property="og:description" content="SunFlight is an app that shows you the path of the sun for your flight."/>
-
-	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/excite-bike/jquery-ui.css" type="text/css" media="screen, projection" />
-	<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/excite-bike/jquery-ui.css" type="text/css" media="screen, projection" />
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen, projection" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-	<!-- libraries -->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
-	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
 	<!-- http://stackoverflow.com/questions/7936119/setting-maximum-width-for-content-in-jquery-mobile -->
 	<style type='text/css'>
@@ -1013,7 +1004,7 @@ if(array_key_exists("autoload", $_GET)) {
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-26345499-1']);
+	  _gaq.push(['_setAccount', 'UA-76212447-1']);
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
