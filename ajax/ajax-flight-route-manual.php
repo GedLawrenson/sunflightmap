@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/London');
 
 // testing
 // comment this out for production
@@ -43,7 +44,7 @@ if (array_key_exists("departure_datetime", $_GET)) {
 
 
 $from_airport_openflights = getAirport($origin);
-if ($from_airport_openflights == "") { 
+if ($from_airport_openflights == "") {
 	print($callback . "({'error':'Unable to lookup origin airport. Please use a valid airport code (ie: SYD)'});");
 	die();
 }
@@ -51,7 +52,7 @@ $from_city = $from_airport_openflights["City"];
 $from_lat = $from_airport_openflights["Lat"];
 $from_lon = $from_airport_openflights["Lon"];
 $to_airport_openflights = getAirport($destination);
-if ($to_airport_openflights == "") { 
+if ($to_airport_openflights == "") {
 	print($callback . "({'error':'Unable to lookup destination airport. Please use a valid airport code (ie: SYD)'});");
 	die();
 }
@@ -83,7 +84,7 @@ $flight_segments[] = $flight_data;
 $flight_routes = $flight_segments;
 
 
-// run sfcalc 
+// run sfcalc
 for ($i = 0; $i < sizeof($flight_routes); $i++) {
 
 	$flight_data = &$flight_routes[$i]; // get reference
