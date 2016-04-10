@@ -5,7 +5,7 @@ include_once("airport_codes.php"); // todo: could move this to load on demand si
 
 function getAirport($airport_code) {
 	global $openflights_airports;
-	if (array_key_exists($airport_code, $openflights_airports)) { 
+	if (array_key_exists($airport_code, $openflights_airports)) {
 		return $openflights_airports[$airport_code];
 	}
 	// not found
@@ -86,7 +86,7 @@ function showRecentSearches() {
 	$cache_files = @scandir($dir);
 	//print_r($cache_files);
 
-	if ($cache_files == null) { 
+	if ($cache_files == null) {
 		print("No recent results.");
 		return;
 	}
