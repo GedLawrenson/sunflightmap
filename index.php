@@ -3,7 +3,7 @@ include("lib/global.php");
 
 // allow input from URL
 $autoload = false;
-
+date_default_timezone_set('Europe/London');
 $date_depart=date("Y-m-d\TH:i"); // ie: 2013-12-31T15:35
 //$date_depart="2013-12-31T15:35";
 if (array_key_exists("date", $_GET)) {
@@ -33,21 +33,21 @@ if(array_key_exists("autoload", $_GET)) {
 }
 
 ?>
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SunFlight.net - Day and Night Flight Map</title>
 
 	<meta name="description" content="SunFlight is an app that shows you the path of the sun for your flight.">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-	
-	<meta property="og:title" content="SunFlight.net" /> 
-	<meta property="og:description" content="SunFlight is an app that shows you the path of the sun for your flight."/> 
-	
+
+	<meta property="og:title" content="SunFlight.net" />
+	<meta property="og:description" content="SunFlight is an app that shows you the path of the sun for your flight."/>
+
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/excite-bike/jquery-ui.css" type="text/css" media="screen, projection" />
 	<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>-->
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen, projection" />
@@ -56,7 +56,7 @@ if(array_key_exists("autoload", $_GET)) {
 	<!-- libraries -->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>-->
 	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
@@ -84,7 +84,7 @@ if(array_key_exists("autoload", $_GET)) {
 	<script type="text/javascript" src="/js/richmarker-compiled.js"></script>
 
 	<script type="text/javascript">
-	
+
 	var map;
 	var flightPaths = Array();
 	var markers = Array();
@@ -125,7 +125,7 @@ if(array_key_exists("autoload", $_GET)) {
 	        if (array_key_exists("debug", $_GET)) { ?>$('#debug').show(); <?
 	        } ?>
 	        updatePermalink();
-	        
+
 	        $('#enter-flight-code').bind('expand', expandFlightCodeContainer);
 	        $('#enter-flight-code').bind('collapse', collapseFlightCodeContainer);
 
@@ -151,7 +151,7 @@ if(array_key_exists("autoload", $_GET)) {
 	        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
 	        <?php
 	        if ($autoload) { ?>
-	        	mapFlight(); 
+	        	mapFlight();
 	        <?
 	        } ?>
 	    }
@@ -302,7 +302,7 @@ if(array_key_exists("autoload", $_GET)) {
 	         		origin: getInputOrigin(), // SYD
 	         		destination: getInputDestination(), // DXB
 	         		departure_datetime: getInputRequestDate(), // 2014-03-10 04:30 pm
-	         		duration: getInputDuration() * 60 // 600 
+	         		duration: getInputDuration() * 60 // 600
 	            //"2011-10-14"
 	        },
 	        function(data) {
@@ -354,7 +354,7 @@ if(array_key_exists("autoload", $_GET)) {
 			content_html += '<span style="color: red;">Sun Left = ' + showPercent(data.flight_stats.percent_left) + '%</span> &middot; ';
 			content_html += '<span style="color: green;">Right = ' + showPercent(data.flight_stats.percent_right) + '%</span> &middot; ';
 			content_html += '<span style="color: blue;">Night = ' + showPercent(data.flight_stats.percent_night) + '%</strong></p>';
-			
+
 			// first sunrise and sunset (if any)
 			if (data.flight_stats.mins_to_first_sunrise < data.flight_stats.mins_to_first_sunset) {
 				// sunrise is before sunset
@@ -423,7 +423,7 @@ if(array_key_exists("autoload", $_GET)) {
 
 	    	// show map
 	    	$('#map_container').show();
-	    	
+
 	    	$.mobile.hidePageLoadingMsg(); // $('#loading-page').hide();
 	    	$('#enter-flight-code').trigger('collapse');
 	    	$('#results-panel').html("");
@@ -524,7 +524,7 @@ if(array_key_exists("autoload", $_GET)) {
 
 	                //console.log(first_flight.depart_time_utc);
 	                mapSunPosition(flightPaths, map, new Date(Date.parse(first_flight.depart_time_utc)), total_minutes, slider_value);
-	                
+
 	                // map path of the sun
 	                // work out which flight segment we are in using flight_segment_by_minute index
 	                var flight_segment = flight_segment_by_minute[slider_value];
@@ -562,11 +562,11 @@ if(array_key_exists("autoload", $_GET)) {
 			        	current_bearing = flight_point["bearing_from_north"];
 			        }
 	                mapFlightPosition(flightPaths, map, current_flight.from_lat, current_flight.from_lon, current_flight.to_lat, current_flight.to_lon, current_flight.elapsed_time, relative_ui_value, current_bearing);
-	                
+
 	                // map path of the sun
 	                mapDayNightShadow(map, new Date(Date.parse(first_flight.depart_time_utc)), slider_value);
 	                $("#minutes_travelled").val(slider_value);
-	                updateSliderTime(slider_value, total_minutes);  
+	                updateSliderTime(slider_value, total_minutes);
 
 				}, 10); // end set timeout
             }); // end change event
@@ -604,7 +604,7 @@ if(array_key_exists("autoload", $_GET)) {
             // flightmap({"from_airport": "MEL","from_city": "Melbourne","from_lat": -37.673333,"from_lon": 144.843333,"to_airport": "SIN","to_city": "Singapore","to_lat": 1.350189,"to_lon": 103.994433,"depart_time": "2011-10-16T12:00:00","elapsed_time": 470})
 			resetResults();
 
-			// check flight data for errors	        
+			// check flight data for errors
 	       	for(var i = 0; i < flightdata.length; i++) {
 
 	       		// check for errors
@@ -665,7 +665,7 @@ if(array_key_exists("autoload", $_GET)) {
 	        $("#results-panel").append('<ul id="results-list" data-role="listview" data-theme="d" data-divider-theme="d">' + results_html + "</ul>");
 	        //$("#results-panel").append(results_html);
 	        //$("#results-panel").append('</ul>');
-           	$("#results-list").listview();      
+           	$("#results-list").listview();
 
 	        // show slider
 	        $('#slider-container').show();
@@ -797,7 +797,7 @@ if(array_key_exists("autoload", $_GET)) {
 	        <?php if (isMobile()) { ?>
 	        map.setCenter(flightMarker.getPosition());
 	        <?php } ?>
-	        
+
 	    }
 
 	    function updateSliderTime(t, max)
@@ -835,8 +835,8 @@ if(array_key_exists("autoload", $_GET)) {
 
 	});
 	</script>
-		
-	
+
+
 </head>
 <body>
 
@@ -854,8 +854,8 @@ if(array_key_exists("autoload", $_GET)) {
 
 	</div><!-- /header -->
 
-	<div data-role="content" id="home">	
-		
+	<div data-role="content" id="home">
+
 			<div id="chrome_note" style="display: none;"><p style="font-size: smaller;">(Please note: This app works best in Google Chrome)</p></div>
 
 			<div data-role="collapsible" data-collapsed="false" id="enter-flight-code">
@@ -948,7 +948,7 @@ if(array_key_exists("autoload", $_GET)) {
 			</div>
 
 	</div><!-- /content -->
-	
+
 	<div data-role="footer" data-theme="d">
 		<h4>Flight hacker? <a href="https://github.com/aussieian/sunflightmap">Fork on Github</a></h4>
 	</div><!-- /footer -->
@@ -963,11 +963,11 @@ if(array_key_exists("autoload", $_GET)) {
 		<h1>Frequently Asked Questions</h1>
 	</div><!-- /header -->
 
-	<div data-role="content" data-theme="a">	
+	<div data-role="content" data-theme="a">
 		<h2>FAQ</h2>
 
 		<p><strong>Q: What is SunFlight?</strong>
-		<br>A: SunFlight is an app that shows you the path of the sun for your flight. 
+		<br>A: SunFlight is an app that shows you the path of the sun for your flight.
 		You can use it for whatever purpose you want, however most people use this app to help plan where to sit on their flight, based on the location of the sun.<br>
 		This app is open source, so feel free have a look at <a href="https://github.com/aussieian/sunflightmap">GitHub</a>.
 		</p>
@@ -984,11 +984,11 @@ if(array_key_exists("autoload", $_GET)) {
 		</p>
 
 		<p><strong>Q: At what point is the sunset/sunrise calculated?</strong>
-		<br>A: Sunset and sunrise is determined when the sun's altitude reaches 6 degrees from the horizon from the ground. 
+		<br>A: Sunset and sunrise is determined when the sun's altitude reaches 6 degrees from the horizon from the ground.
 		</p>-->
 
 		<p><strong>Q: Does SunFlight calculate the exact flight path?</strong>
-		<br>A: SunFlight uses the geodesic (shortest path) between two points, which in most cases will simulate the approximate flight path. 
+		<br>A: SunFlight uses the geodesic (shortest path) between two points, which in most cases will simulate the approximate flight path.
 		</p>
 
 		<p><strong>Q: How can I contact the creator of this site?</strong>
@@ -999,10 +999,10 @@ if(array_key_exists("autoload", $_GET)) {
 		<br>A: Yes it should work with the latest iOS version for both iPad and iPhones.
 		</p>
 
-		<p><a href="#home" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to home page</a></p>	
-		
+		<p><a href="#home" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to home page</a></p>
+
 	</div><!-- /content -->
-	
+
 	<div data-role="footer">
 		<h4>SunFlight.net</h4>
 	</div><!-- /footer -->
@@ -1024,6 +1024,6 @@ if(array_key_exists("autoload", $_GET)) {
 
 	</script>
 	<!-- analytics -->
-	
+
 </body>
 </html>
