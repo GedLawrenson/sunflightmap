@@ -808,7 +808,7 @@ if(array_key_exists("autoload", $_GET)) {
 
 	    function updatePermalink()
 	    {
-	        $('#permalink').attr("href", "http://" + window.location.hostname + "/?origin=" + getInputOrigin() + "&destination=" + getInputDestination() + "&date=" + getInputRequestDate() + "&duration=" + getInputDuration());
+	        $('#permalink').attr("href", "//" + window.location.hostname + "/?origin=" + getInputOrigin() + "&destination=" + getInputDestination() + "&date=" + getInputRequestDate() + "&duration=" + getInputDuration());
 	    }
 
 
