@@ -53,7 +53,6 @@ if(array_key_exists("autoload", $_GET)) {
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 
-	<!-- http://stackoverflow.com/questions/7936119/setting-maximum-width-for-content-in-jquery-mobile -->
 	<style type='text/css'>
     <!--
         html { background-color: #f9f9f9; }
