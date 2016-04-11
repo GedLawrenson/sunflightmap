@@ -93,3 +93,5 @@ button.shiny-blue {
 						border-left: 5px #666 outset !important;
 				}
 		}
+[data-role=page]{height: 100% !important; position:relative !important;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
