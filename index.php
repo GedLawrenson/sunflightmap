@@ -46,29 +46,12 @@ if(array_key_exists("autoload", $_GET)) {
 	<meta property="og:title" content="SunFlight" />
 	<meta property="og:description" content="SunFlight is an app that shows you the path of the sun for your flight."/>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/excite-bike/jquery-ui.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen, projection" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-
-	<style type='text/css'>
-    <!--
-        html { background-color: #f9f9f9; }
-        @media only screen and (min-width: 600px){
-            .ui-page {
-                width: 600px !important;
-                margin: 0 auto !important;
-                position: relative !important;
-                border-right: 5px #666 outset !important;
-                border-left: 5px #666 outset !important;
-            }
-        }
-    -->
-    </style>
-
-	<!-- custom code -->
 	<script type="text/javascript" src="/js/daynightmaptype.js"></script>
 	<script type="text/javascript" src="/js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="/js/richmarker-compiled.js"></script>
