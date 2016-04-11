@@ -995,7 +995,7 @@ if(array_key_exists("autoload", $_GET)) {
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>SunFlight.net</h4>
+		<h4>SunFlight.io</h4>
 	</div><!-- /footer -->
 </div><!-- /page donate -->
 
