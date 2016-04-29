@@ -52,9 +52,9 @@ if(array_key_exists("autoload", $_GET)) {
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-	<script type="text/javascript" src="/js/daynightmaptype.js"></script>
-	<script type="text/javascript" src="/js/jQueryRotate.2.2.js"></script>
-	<script type="text/javascript" src="/js/richmarker-compiled.js"></script>
+	<script type="text/javascript" src="/js/daynightmaptype.min.js"></script>
+	<script type="text/javascript" src="/js/jQueryRotate.2.2.min.js"></script>
+	<script type="text/javascript" src="/js/richmarker-compiled.min.js"></script>
 
 	<script type="text/javascript">
 
