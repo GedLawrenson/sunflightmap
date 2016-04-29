@@ -27,7 +27,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-clean');
 
 // register at least this one task
-grunt.registerTask('default', [ 'uglify' ]);
+grunt.registerTask('default', [ 'uglify', 'clean']);
 
 
 };
