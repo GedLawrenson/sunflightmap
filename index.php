@@ -55,7 +55,6 @@ if(array_key_exists("autoload", $_GET)) {
 	<script type="text/javascript" src="/js/daynightmaptype.min.js"></script>
 	<script type="text/javascript" src="/js/jQueryRotate.2.2.min.js"></script>
 	<script type="text/javascript" src="/js/richmarker-compiled.min.js"></script>
-
 	<script type="text/javascript">
 
 	var map;
