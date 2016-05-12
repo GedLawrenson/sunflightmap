@@ -16,6 +16,14 @@ module.exports = function (grunt) {
         js: ['js/*.js', '!js/*.min.js']
     },
 
+uncss: {
+  dist: {
+    files: {
+      'css/stylesheet.css': ['index.php']
+    }
+  }
+},
+
     watch: {
         js:  { files: 'js/*.js', tasks: [ 'uglify' ] },
     }
@@ -25,9 +33,10 @@ module.exports = function (grunt) {
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-clean');
+grunt.loadNpmTasks('grunt-uncss');
 
 // register at least this one task
-grunt.registerTask('default', [ 'uglify', 'clean']);
+grunt.registerTask('default', [ 'uglify', 'clean', 'uncss']);
 
 
 };
