@@ -22,9 +22,7 @@ module.exports = function (grunt) {
 });
 
 // load plugins
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-clean');
+require('load-grunt-tasks')(grunt);
 
 // register at least this one task
 grunt.registerTask('default', [ 'uglify', 'clean']);
