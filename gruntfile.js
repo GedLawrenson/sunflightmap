@@ -22,6 +22,7 @@ module.exports = function (grunt) {
 });
 
 // load plugins
+require('time-grunt')(grunt);
 require('load-grunt-tasks')(grunt);
 
 // register at least this one task
