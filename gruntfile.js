@@ -12,13 +12,22 @@ module.exports = function (grunt) {
         }
     },
 
-    clean: {
-        js: ['js/*.js', '!js/*.min.js']
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'css/',
+          src: ['*.css', '!*.min.css'],
+          dest: 'css/',
+          ext: '.min.css'
+        }]
+      }
     },
 
-    watch: {
-        js:  { files: 'js/*.js', tasks: [ 'uglify' ] },
-    }
+    clean: {
+        js: ['js/*.js', '!js/*.min.js'],
+        css: ['css/*.css', '!css/*.min.css']
+    },
 });
 
 // load plugins
@@ -26,7 +35,7 @@ require('time-grunt')(grunt);
 require('load-grunt-tasks')(grunt);
 
 // register at least this one task
-grunt.registerTask('default', [ 'uglify', 'clean']);
+grunt.registerTask('default', [ 'uglify', 'cssmin', 'clean']);
 
 
 };
