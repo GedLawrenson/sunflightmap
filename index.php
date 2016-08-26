@@ -961,7 +961,7 @@ if(array_key_exists("autoload", $_GET)) {
 		</p>
 
 		<p><strong>Q: How can I contact the creator of this site?</strong>
-		<br>A: Contact me at <a href="mailto:ian@travelmassive.com">ian@travelmassive.com</a>
+		<br>A: Contact me on <a href="https://github.com/GedLawrenson">GitHub</a>.
 		</p>
 
 		<p><strong>Q: Does it work on iPad / iPhone?</strong>
