@@ -919,7 +919,7 @@ if(array_key_exists("autoload", $_GET)) {
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="d">
-		<h4>Flight hacker? <a href="https://github.com/aussieian/sunflightmap">Fork on Github</a></h4>
+		<h4>Flight hacker? <a href="https://github.com/gedlawrenson/sunflightmap">Fork on GitHub</a></h4>
 	</div><!-- /footer -->
 </div><!-- /home page -->
 
@@ -947,14 +947,6 @@ if(array_key_exists("autoload", $_GET)) {
 		<p><strong>Q: When will the sun will rise and set on my flight?</strong>
 		<br>SunFlight also tells you when the sunrise and sunset will be on your flight, so you can plan your nap and sleep times. The results summary will indicate when the sunset or sunrise will occur for each leg of your journey.
 		</p>
-
-		<!--<p><strong>Q: Tell me more about how SunFlight works</strong>
-		<br>A: SunFlight calculates the solar altitude and azimuth for every minute of the flight (based on a geodesic path of the flight), and then calculates which side of the plane the sun will be on based on the current bearing of the flight.
-		</p>
-
-		<p><strong>Q: At what point is the sunset/sunrise calculated?</strong>
-		<br>A: Sunset and sunrise is determined when the sun's altitude reaches 6 degrees from the horizon from the ground.
-		</p>-->
 
 		<p><strong>Q: Does SunFlight calculate the exact flight path?</strong>
 		<br>A: SunFlight uses the geodesic (shortest path) between two points, which in most cases will simulate the approximate flight path.
