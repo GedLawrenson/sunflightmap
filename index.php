@@ -46,15 +46,15 @@ if(array_key_exists("autoload", $_GET)) {
 	<meta property="og:title" content="SunFlight" />
 	<meta property="og:description" content="SunFlight is an app that shows you the path of the sun for your flight."/>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/excite-bike/jquery-ui.css" type="text/css" media="screen, projection" />
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<link rel="stylesheet" href="css/stylesheet.min.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.css" />
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen, projection" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcodgXUtVmeGCoAWvxlwmBJOG3E0eWOo&libraries=geometry"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha384-EaUkI/FiMJtEXWAl0dCczvbFvjfzsIF1UNKGJvu9p5JIG71Kih7/kQJvYbBL7HOn" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js" integrity="sha384-8Th3468Q9uumHXGYsyuyaXnJxCL6uX6zrvZNY9Un8ccxdxM2hSEIasxA8RBP/kPN" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/js/daynightmaptype.min.js"></script>
-	<script type="text/javascript" src="/js/jQueryRotate.min.js"></script>
-	<script type="text/javascript" src="/js/richmarker-compiled.min.js"></script>
+	<script type="text/javascript" src="/js/daynightmaptype.js"></script>
+	<script type="text/javascript" src="/js/jQueryRotate.js"></script>
+	<script type="text/javascript" src="/js/richmarker-compiled.js"></script>
 	<script type="text/javascript">
 
 	var map;
