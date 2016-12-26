@@ -36,6 +36,5 @@ require('load-grunt-tasks')(grunt);
 
 // register at least this one task
 grunt.registerTask('default', [ 'uglify', 'cssmin', 'clean']);
-
-
+grunt.registerTask('heroku', ['uglify', 'cssmin', 'clean']);
 };
