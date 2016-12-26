@@ -1,0 +1,12 @@
+{
+    "name": "gedlawrenson/sunflightmap",
+    "description": "Sunflight is an app that shows you the path of the sun for your flight.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ged Lawrenson",
+            "email": "gedlawrenson@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
