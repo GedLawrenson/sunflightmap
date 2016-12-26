@@ -1,7 +1,7 @@
 {
   "name": "sunflightmap",
   "version": "1.0.0",
-  "devDependencies": {
+  "dependencies" : {
     "grunt": "~0.4.2",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-cssmin": "^1.0.1",
