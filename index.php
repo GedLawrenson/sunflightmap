@@ -53,7 +53,7 @@ if(array_key_exists("autoload", $_GET)) {
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha384-EaUkI/FiMJtEXWAl0dCczvbFvjfzsIF1UNKGJvu9p5JIG71Kih7/kQJvYbBL7HOn" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js" integrity="sha384-8Th3468Q9uumHXGYsyuyaXnJxCL6uX6zrvZNY9Un8ccxdxM2hSEIasxA8RBP/kPN" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/js/daynightmaptype.js"></script>
-	<script type="text/javascript" src="/js/jQueryRotate.js"></script>
+	<script type="text/javascript" src="/js/jQueryRotate.2.2.js"></script>
 	<script type="text/javascript" src="/js/richmarker-compiled.js"></script>
 	<script type="text/javascript">
 
