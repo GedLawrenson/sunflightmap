@@ -938,11 +938,11 @@ if(array_key_exists("autoload", $_GET)) {
 		<p><strong>Q: What is SunFlight?</strong>
 		<br>A: SunFlight is an app that shows you the path of the sun for your flight.
 		You can use it for whatever purpose you want, however most people use this app to help plan where to sit on their flight, based on the location of the sun.<br>
-		This app is open source, so feel free have a look at <a href="https://github.com/aussieian/sunflightmap">GitHub</a>.
+		This app is open source, so feel free have a look at <a href="https://github.com/GedLawrenson/sunflightmap">GitHub</a>.
 		</p>
 
-		<p><strong>Q: Are you still maintaining SunFlight?</strong>
-		<br>A: I am no longer maintaining SunFlight. However since I've made the source code open source, you can always improve the app yourself. If you make any noteable enhancements and would like me to update the app, please fork the code and send me a diff to look at. If you would like to take over maintaining sunflight, then also please get in contact with me.<br>
+		<p><strong>Q: Is SunFlight maintained?</strong>
+		<br>A: I don't actively develop SunFlight, but please get in touch if you have any suggestions or issues.<br>
 
 		<p><strong>Q: When will the sun will rise and set on my flight?</strong>
 		<br>SunFlight also tells you when the sunrise and sunset will be on your flight, so you can plan your nap and sleep times. The results summary will indicate when the sunset or sunrise will occur for each leg of your journey.
@@ -956,8 +956,8 @@ if(array_key_exists("autoload", $_GET)) {
 		<br>A: Contact me on <a href="https://github.com/GedLawrenson">GitHub</a>.
 		</p>
 
-		<p><strong>Q: Does it work on iPad / iPhone?</strong>
-		<br>A: Yes it should work with the latest iOS version for both iPad and iPhones.
+		<p><strong>Q: Does it work on Android / iPad / iPhone?</strong>
+		<br>A: SunFlight should work on all devices, please get in touch if you have any issues.
 		</p>
 
 		<p><a href="#home" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to home page</a></p>
