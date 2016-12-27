@@ -4,10 +4,10 @@ include("lib/global.php");
 // allow input from URL
 $autoload = false;
 date_default_timezone_set('Europe/London');
-$date_depart=date("Y-m-d\TH:i"); // ie: 2013-12-31T15:35
-//$date_depart="2013-12-31T15:35";
+$dateDepart = date("Y-m-d\TH:i"); // ie: 2013-12-31T15:35
+//$dateDepart="2013-12-31T15:35";
 if (array_key_exists("date", $_GET)) {
-	$date_depart=$_GET['date'];
+	$dateDepart = $_GET['date'];
 	$autoload = true;
 }
 
@@ -832,7 +832,7 @@ if(array_key_exists("autoload", $_GET)) {
 
 				<input id="origin" value="<?php print($origin);?>" size="5">
 				<input id="destination" value="<?php print($destination);?>" size="5">
-				<input type="datetime-local" data-clear-btn="false" name="requestDate" id="requestDate" value=""> <!--<?php print($date_depart); ?>-->
+				<input type="datetime-local" data-clear-btn="false" name="requestDate" id="requestDate" value=""> <!--<?php print($dateDepart); ?>-->
 				<input id="duration" value="<?php print($duration);?>" size="5">
 
 				<button onClick="mapFlight();" data-theme="e">Show Flight Map</button>
